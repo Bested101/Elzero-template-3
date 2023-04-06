@@ -128,7 +128,7 @@ header .container{
 header .nav{
   display: flex;
 }
-.nav>li>a{
+.nav>li>a , .nav>li>span{
   height: 70px;
   line-height: 70px;
   padding: 0 25px;
@@ -139,7 +139,7 @@ header .nav{
   display: block;
   z-index: 3;
 }
-.nav>li>a::before{
+.nav>li>a::before , .nav>li>span::before{
   content: "";
   width: 100%;
   height: calc(100% - 4px);
@@ -150,10 +150,10 @@ header .nav{
   left: -100%;
   transition: .3s;
 }
-.nav>li>a:hover::before{
+.nav>li>a:hover::before , .nav>li>span:hover::before{
   left: 0;
 }
-.nav>li>a:hover{
+.nav>li>a:hover , .nav>li>span:hover{
   color: var(--main-alt-color);
 }
 header .other{
@@ -207,11 +207,11 @@ header .other{
 .other:hover{
   pointer-events: initial;
 }
-.other:hover + a{
+.other:hover + span{
   color: var(--main-alt-color);
   background-color: rgba(230, 230, 255, .3);
 }
-.other:hover + a::before{
+.other:hover + span::before{
   left: 0;
 }
 header .container:has(.nav>li:last-child:hover) .other{
@@ -669,8 +669,17 @@ header .container:has(.nav>li:last-child:hover) .other{
 .member:has(img:hover , .info:hover) img{
   filter: grayscale(1);
 }
-.member i:hover{
-  color: var(--main-alt-color);
+.member li:first-of-type:hover i{
+  color: #4267B2;
+}
+.member li:nth-of-type(2):hover i{
+  color: #1DA1F2;
+}
+.member li:nth-of-type(3):hover i{
+  color: #0072b1;
+}
+.member li:last-of-type:hover i{
+  color: #ff0000;
 }
 .services{
   padding-block: var(--block-padding);
