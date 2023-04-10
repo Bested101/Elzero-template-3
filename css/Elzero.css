@@ -29,13 +29,13 @@ a{
   border: 2px solid black;
   padding: 10px 20px;
   position: relative;
-  transition: all .2s linear;
+  transition: all .1s linear;
   z-index: 0;
 }
 .main-heading:hover{
   color: white;
   border-color: white;
-  transition-delay: .6s;
+  transition-delay: .3s;
 }
 .main-heading::before{
   left:-30px ;
@@ -56,10 +56,10 @@ a{
   z-index: -2;
 }
 .main-heading:hover::after{
-  animation: title-fill-right .6s linear forwards;
+  animation: title-fill-right .3s linear forwards;
 }
 .main-heading:hover::before{
-  animation: title-fill-left .6s linear forwards;
+  animation: title-fill-left .3s linear forwards;
 }
 @keyframes title-fill-right{
   50%{
