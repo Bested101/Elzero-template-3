@@ -38,10 +38,10 @@ a{
   transition-delay: .6s;
 }
 .main-heading::before{
-  left:-35px ;
+  left:-30px ;
 }
 .main-heading::after{
-  right:-35px ;
+  right:-30px ;
 }
 .main-heading::before , .main-heading::after{
   content: "";
@@ -781,4 +781,761 @@ header .container:has(.nav>li:last-child:hover) .other{
 }
 .services .box:hover::before{
   width: 100%;
+}
+.skills{
+  padding-block: var(--block-padding);
+}
+.skills .container{
+  display: flex;
+  justify-content: space-between;
+}
+.skills img{
+  width: 42.5%;
+}
+.skills .langs{
+  flex: 1;
+  display: flex;
+  flex-flow: column wrap;
+}
+.skills .langs{
+  display: flex;
+  justify-content: space-between;
+}
+.skills .info{
+  display: flex;
+  justify-content: space-between;
+}
+.skills .progress{
+  width: 100%;
+  background-color: #eee;
+  height: 32px;
+}
+.skills .num{
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.skills span{
+  height: 100%;
+  background-color: var(--main-color);
+  display: block;
+}
+@media (max-width:991px){
+  .skills img{
+    display: none;
+  }
+  .skills .langs{
+    gap: 15px;
+  }
+}
+.how{
+  padding-block: var(--block-padding);
+  background-color: var(--section-color);
+}
+.how .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:100px ;
+}
+.how .box{
+  display: flex;
+  justify-content: space-between;
+}
+.how .box img{
+  max-width: 64px;
+  max-height: 64px;
+}
+.how .container>img{
+  max-width: 100%;
+}
+.how .content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+.how .box{
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: rgb(244, 244, 244);
+  padding: 25px 35px;
+  border:2px solid white;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+.how .box p{
+  font-size: 18px;
+  color: #777;
+  line-height: 1.8;
+}
+.how .box h3{
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.how .box:before{
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  background-color: var(--section-color);
+  border-radius: 5px;
+  z-index: 0;
+  transition: .3s;
+  z-index: -1;
+}
+.how .box:hover::before{
+  width: 100%;
+  height: 100%;
+}
+@media (max-width:991px) {
+  .how .container{
+    flex-direction: column;
+  }
+}
+@media (max-width:767px) {
+  .how .box{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.events{
+  position: relative;
+  padding-block: var(--block-padding);
+}
+.events .container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.events img{
+  max-width: 450px;
+}
+.events::before , .events::after{
+  content: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/dots.png);
+  position: absolute;
+  z-index: -1;
+}
+.events::before{
+  right: 0;
+  top: 200px;
+}
+.events::after{
+  left: 0;
+  bottom: 175px;
+}
+.events .content{
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  align-content: center;
+  flex-flow: wrap;
+  justify-content: center;
+}
+.events .time{
+  display: flex;
+  gap: 10px;
+  max-width: 340px;
+  flex: 1;
+}
+.events .time .box{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex: 1;
+  width: calc((100% - 30px) / 4);
+  text-align: center;
+}
+.events .num{
+  font-size: 35px;
+  font-weight: bold;
+  padding-block:15px;
+  text-indent: 0;
+  color: var(--main-color);
+}
+.events .unit{
+  font-size: 13px;
+  width: 100%;
+  padding-block: 7px;
+  border-top: 1px solid #ddd;
+}
+.events .time .box:hover , .events .time .box:hover .unit{
+  border-color: var(--main-color);
+}
+.events h3{
+  font-size: 30px;
+  margin: 20px auto;
+  width: fit-content;
+  text-align: center;
+}
+.events p {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 19px;
+  color: #777;
+}
+.events form{
+  margin: 20px auto;
+  width: 600px;
+  padding: 30px 40px;
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  border-radius:300px ;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.events form input[type=email]{
+  min-width: 75%;
+  flex: 1;
+  border-radius: 202.5px;
+  border: none;
+  outline: none;
+  padding: 0px 20px;
+  caret-color: var(--main-color);
+  height: 55px;
+}
+.events form input[type=submit]{
+  min-width: 105px;
+  flex: 1;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius:54px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+}
+.events form input[type=submit]:hover{
+  background-color: var(--main-alt-color);
+}
+.events form input[type=email]:focus::placeholder{
+  opacity: 0;
+  transition: .3s;
+}
+@media (max-width:991px) {
+  .events img{
+    display: none;
+  }
+}
+@media (max-width:767px) {
+  .events form{
+    border-radius: 5px;
+  }
+  .events form input[type=submit],.events form input[type=email]{
+    border-radius: 4px;
+  }
+  .events::before , .events::after{
+    display: none;
+  }
+}
+.plans{
+  position: relative;
+  padding-block: var(--block-padding);
+  background-color: var(--section-color);
+}
+.plans::before , .plans::after{
+  content: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/dots.png);
+  position: absolute;
+  z-index: 1;
+}
+.plans::before{
+  right: 0;
+  top: 200px;
+}
+.plans::after{
+  left: 0;
+  bottom: 175px;
+}
+.plans .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  gap: 30px;
+}
+.plans .plan{
+  display: flex;
+  gap: 30px;
+  flex-flow: column wrap;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  padding-block: 25px;
+  overflow: hidden;
+  z-index: 3;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+}
+.plans h3{
+  font-size: 25px;
+}
+.plans img{
+  max-width: 80px;
+}
+.plans .plan:nth-child(2){
+  transform: translateY(-25px);
+}
+.plans .popular{
+  position: absolute;
+  rotate: 90deg;
+  top: 51px;
+  right: -7%;
+  background: var(--main-color);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10.66px 30px 10.66px 13px;
+}
+.plans .popular::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0; 
+  border-style: solid;
+  border-width: 21px 21px 21px 0;
+  border-color: transparent #ffffff transparent transparent;
+  right: -1px;
+  bottom:0px ;
+  transition: .3s;
+}
+.plan .num{
+  font-size: 60px;
+  display: block;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.plan .per{
+  display: block;
+  text-align: center;
+  color: #777;
+}
+.plan ul{
+  width: 100%;
+}
+.plan li{
+  padding: 20px 15px;
+  border-top: 1px solid #ddd;
+}
+.plan li::before{
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--main-color);
+  font-size: 18px;
+  margin-right: 10px;
+}
+.plan button{
+  padding: 15px 20px;
+  border: 2px solid var(--main-color);
+  background-color: transparent;
+  border-radius: 6px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+@media (max-width:1199px) {
+  .plans .plan:nth-child(2){
+    transform: translateY(0);
+  }
+}
+.plan:before , .plan:after{
+  content: "";
+  height: 50%;
+  width: 0;
+  position: absolute;
+  background-color: #f0f0f0;
+  opacity: .7;
+  z-index: -1;
+  transition: .3s;
+}
+.plan:after{
+  right:0;
+  bottom: 0;
+}
+.plan:before{
+  left: 0;
+  top: 0;
+}
+.plan:hover::before , .plan:hover:after{
+  width: 100%;
+}
+.plan:hover .popular::after{
+  border-color: transparent #f0f0f0 transparent transparent;
+}
+.plans button:hover{
+  background-color: var(--main-alt-color);
+  color: white;
+  border-color: var(--main-alt-color);
+}
+.videos{
+  padding-block:var(--block-padding) ;
+}
+.videos .container{
+  display: flex;
+  justify-content: space-between;
+}
+.videos .stamps{
+  border: 1px solid #cdcdcd;
+  min-width: 300px;
+}
+.top{
+  background-color: #ecebeb;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.videos h3{
+  font-size: 16px;
+}
+.videos ul{
+  background-color: white;
+}
+.videos li{
+  padding: 20px;
+  border-top:1px solid #cdcdcd;
+  cursor: pointer;
+}
+.videos .time{
+  display: block;
+  color: #777;
+  margin-top: 10px;
+}
+.video{
+  background-color: rgb(233, 233, 233);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 12PX;
+}
+.video .info{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+.videos img{
+  width: 100%;
+}
+@media(max-width:991px){
+  .videos .container{
+    flex-direction: column;
+  }
+  .videos .stamps{
+    border-bottom-width: 0;
+    max-width: 100%;
+  }
+}
+.videos li:hover{
+  background-color:rgba(204, 209, 218, 0.231);
+}
+.videos li:hover .title{
+  color: var(--main-color);
+}
+.stats{
+  padding-block: var(--block-padding);
+  background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/stats.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.stats::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  opacity: .95;
+}
+.stats .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+  gap: 25px;
+  position: relative;
+}
+.stats h2{
+  text-transform: capitalize;
+  margin:0 auto 80px;
+  width: fit-content;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+}
+.stats .box{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding-block: 20px;
+  gap: 15px;
+  position: relative;
+}
+.stats i{
+  font-size: 2.2em;
+  color: #333;
+}
+.stats .num{
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+}
+.stats .title{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--main-color);
+  font-style: italic;
+}
+.stats .box::before , .stats .box::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: var(--main-color);
+  height: 0;
+  transition: height 1s;
+}
+.stats .box::after{
+  right: 0;
+  top: 0;
+}
+.stats .box::before{
+  left: 0;
+  bottom: 0;
+}
+.stats .box:hover::before , .stats .box:hover::after{
+  height: 100%;
+}
+.stats .box:hover .num , .stats .box:hover i{
+  color: black;
+}
+.discount{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.discount .offer{
+  flex: 1;
+  padding-block: 70px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/discount-background1.jpg);
+  background-size: cover;
+  animation: back 5s linear infinite alternate;
+}
+.discount .offer::before{
+  content: "";
+  background-color: var(--main-alt-color);
+  opacity: .98;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes back{
+  to{
+    background-image:url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Three/imgs/discount-background2.jpg) ;
+  }
+}
+.discount .offer .content{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  padding: 0 15px;
+  text-align: center;
+  gap: 30px;
+  color: white;
+}
+.discount .offer .content h2{
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+.discount .content p{
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+.discount img{
+  width: 300px;
+}
+.discount .request{
+  flex:1;
+}
+.discount .request{
+  padding-block: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  min-height: 670px;
+}
+.discount .request h2{
+  font-size: 40px;
+  margin-bottom: 30px;
+  letter-spacing: -2px;
+}
+.discount .request .content{
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+.discount form{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1;
+}
+.discount textarea{
+  height: 210px;
+  resize: none;
+  border:none ;
+  border-bottom: 1px solid #ddd;
+  background-color: #f7f6f6;
+  padding: 10px;
+}
+.discount input[type=submit]{
+  height: 60px;
+  background-color: var(--main-color);
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.discount input.info{
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ddd;
+  background-color: #f7f6f6;
+}
+@media (max-width:991px) {
+  .discount{
+    flex-direction: column;
+  }
+  .offer{
+    width: 100%;
+  }
+}
+.discount input[type=submit]:hover{
+  background-color: var(--main-alt-color);
+}
+footer{
+  background-color: #191919;
+  padding: 70px 0 150px ;
+  color: #b9b9b9;
+  position: relative;
+}
+footer .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+  gap: 40px;
+}
+footer h2{
+  font-size: 50px;
+  color: white;
+}
+footer .box1 li{
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #313131;
+  color: #b9b9b9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  margin-block: 15px;
+  cursor: pointer;
+}
+footer .box1 p{
+  line-height: 1.8;
+}
+footer .box2 li{
+  padding:15px 0;
+  cursor: pointer;
+}
+.box2 li:not(:last-child){
+  border-bottom: 1px solid #444;
+}
+footer .box2 li::before{
+  content: "\f101";
+  color: var(--main-color);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+footer .box3>* {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+footer .box3 i{
+  color: var(--main-color);
+  font-size: 25px;
+  margin-right: 10px;
+}
+footer .box4 img{
+  margin: 1px;
+  max-width: 80px;
+  padding: 3px;
+  background-color: white;
+}
+@media (max-width:767px) {
+  footer{
+    text-align: center;
+  }
+  footer .box3 *{
+    display: block;
+    margin-inline: 0;
+  }
+  footer .box3 i{
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
+footer .box2 li:hover{
+  padding-left: 10px;
+  color: white;
+}
+footer::after{
+  content: "Made With <3 By Bested";
+  position: absolute;
+  padding: 30px 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: white;
+  border-top: 1px solid #404040;
+  text-align: center;
+}
+footer .box1 li:first-child:hover{
+  background-color: #4267B2;
+}
+footer .box1 li:nth-child(2):hover{
+  background-color:#1DA1F2;
+}
+footer .box1 li:last-child:hover{
+  background-color: #ff0000;
 }
